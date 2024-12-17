@@ -47,14 +47,20 @@
 // console.log(result);
 function outer() {
   let counter = 0;
-  function increment() {
+  function increment(f1) {
     counter++;
+    console.log(Math.trunc(f1));
+    // if (counter > 1) {
+    //   return undefined;
+    // } else {
     console.log(counter);
+    // }
   }
-  increment();
+  return increment;
 }
-outer();
-outer();
-outer();
-outer();
-outer();
+// const func = outer();
+// func();
+// func();
+// func();
+const anotherfunc = outer();
+const result = anotherfunc(888.23232);
