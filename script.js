@@ -45,22 +45,28 @@
 // console.log(gen(2));
 // console.log(result);
 // console.log(result);
-function outer() {
-  let counter = 0;
-  function increment(f1) {
-    counter++;
-    console.log(Math.trunc(f1));
-    // if (counter > 1) {
-    //   return undefined;
-    // } else {
-    console.log(counter);
-    // }
-  }
-  return increment;
+// function outer() {
+//   let counter = 0;
+//   function increment(f1) {
+//     counter++;
+//     console.log(Math.trunc(f1));
+//     // if (counter > 1) {
+//     //   return undefined;
+//     // } else {
+//     console.log(counter);
+//     // }
+//   }
+//   return increment;
+// }
+// // const func = outer();
+// // func();
+// // func();
+// // func();
+// const anotherfunc = outer();
+// const result = anotherfunc(888.23232);
+f1();
+console.log(a);
+var a = "hello world";
+function f1() {
+  console.log("human");
 }
-// const func = outer();
-// func();
-// func();
-// func();
-const anotherfunc = outer();
-const result = anotherfunc(888.23232);
