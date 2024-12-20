@@ -64,9 +64,35 @@
 // // func();
 // const anotherfunc = outer();
 // const result = anotherfunc(888.23232);
-f1();
-console.log(a);
-var a = "hello world";
-function f1() {
-  console.log("human");
+// f1();
+// console.log(a);
+// var a = "hello world";
+// function f1() {
+//   console.log("human");
+// }
+// undefined is like a placeholder for a value that is not yet defined
+// it is a value of the variable that is not yet initialized
+// program for triangular star pattern
+// for (i = 0; i <= 5; i++) {
+//   for (j = 0; j <= i; j++) {
+//     console.log(" ".repeat(5 - i));
+//     console.log("*".repeat(i));
+//   }
+// }
+function display(data) {
+  console.log(data);
 }
+function hello() {
+  console.log("hello world");
+}
+function block() {
+  let output = [];
+  for (let i = 0; i <= 9000; i++) {
+    output.push(i);
+  }
+}
+setTimeout(hello, 0);
+const result = fetch("https://jsonplaceholder.typicode.com").then(display);
+
+block();
+console.log("first");
