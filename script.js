@@ -81,9 +81,10 @@
 // }
 function display(data) {
   console.log(data);
+  // console.log(err);
 }
 function hello() {
-  console.log("hello world");
+  console.log("hello");
 }
 function block() {
   let output = [];
@@ -92,7 +93,12 @@ function block() {
   }
 }
 setTimeout(hello, 0);
-const result = fetch("https://jsonplaceholder.typicode.com").then(display);
+const result = fetch("https://dog.ceo/api/breeds/image/random")
+  .then((response) => response.json())
+  .then(display)
+  .catch((err) => console.error("Fetch error:", err));
 
 block();
 console.log("first");
+console.log("second");
+console.log("third");
