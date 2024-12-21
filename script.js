@@ -135,11 +135,21 @@
 // console.log(result([5, 6, 7, 8]));
 function objreturn() {
   let id = 1;
+  let name = "kabootar";
+  let counter = 0;
   function inner(obj1) {
-    return (obj1.id = id);
+    counter++;
+
+    if (counter > 10) {
+      return undefined;
+    } else {
+      return { 1: (obj1.id = id), 2: (obj1.name = name) };
+    }
   }
   return inner;
 }
 const result = objreturn();
-const run = result({ id: null });
-console.log(run);
+for (let i = 0; i <= 17; i++) {
+  const run = result({});
+  console.log(run);
+}
