@@ -109,24 +109,37 @@
 // // const main = outer(10);
 // // console.log(main(20));
 
-function closure(arr) {
-  let counter = 0;
-  function inner(innerarr) {
-    let newarr = [];
-    newarr.push(arr);
-    newarr.push(innerarr);
-    counter++;
-    if (counter > 1) {
-      return undefined;
-    } else {
-      return newarr;
-    }
+// const closure = function (arr) {
+//   let counter = 0;
+//   let human = true;
+//   function inner(innerarr) {
+//     human = false;
+//     console.log(human);
+//     let newarr = [];
+//     newarr.push(arr);
+//     newarr.push(innerarr);
+//     counter++;
+//     if (counter > 1) {
+//       return undefined;
+//     } else {
+//       return newarr;
+//     }
+//   }
+//   return inner;
+// };
+// const result = closure([1, 2, 3, 4]);
+// // const result2 = closure([1, 2, 3, 4]);
+
+// console.log(result([5, 6, 7, 8]));
+// console.log(result([5, 6, 7, 8]));
+// console.log(result([5, 6, 7, 8]));
+function objreturn() {
+  let id = 1;
+  function inner(obj1) {
+    return (obj1.id = id);
   }
   return inner;
 }
-const result = closure([1, 2, 3, 4]);
-// const result2 = closure([1, 2, 3, 4]);
-
-console.log(result([5, 6, 7, 8]));
-console.log(result([5, 6, 7, 8]));
-console.log(result([5, 6, 7, 8]));
+const result = objreturn();
+const run = result({ id: null });
+console.log(run);
