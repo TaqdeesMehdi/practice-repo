@@ -79,26 +79,54 @@
 //     console.log("*".repeat(i));
 //   }
 // }
-function display(data) {
-  console.log(data);
-  // console.log(err);
-}
-function hello() {
-  console.log("hello");
-}
-function block() {
-  let output = [];
-  for (let i = 0; i <= 9000; i++) {
-    output.push(i);
-  }
-}
-setTimeout(hello, 0);
-const result = fetch("https://dog.ceo/api/breeds/image/random")
-  .then((response) => response.json())
-  .then(display)
-  .catch((err) => console.error("Fetch error:", err));
+// function display(data) {
+//   console.log(data);
+//   // console.log(err);
+// }
+// // function hello() {
+// //   console.log("hello");
+// // }
+// function block() {
+//   let output = [];
+//   for (let i = 0; i <= 90; i++) {
+//     output.push("human");
+//   }
+//   // console.log(output);
+// }
+// setTimeout(() => console.log("hello"), 0);
+// const result = fetch("https://dog.ceo/api/breeds/image/random").then(display);
 
-block();
-console.log("first");
-console.log("second");
-console.log("third");
+// block();
+// console.log("first");
+// function outer(x) {
+//   function inner(y) {
+//     return x + y;
+//   }
+//   return inner(20);
+// }
+// const main = outer(10);
+// console.log(main);
+// // const main = outer(10);
+// // console.log(main(20));
+
+function closure(arr) {
+  let counter = 0;
+  function inner(innerarr) {
+    let newarr = [];
+    newarr.push(arr);
+    newarr.push(innerarr);
+    counter++;
+    if (counter > 1) {
+      return undefined;
+    } else {
+      return newarr;
+    }
+  }
+  return inner;
+}
+const result = closure([1, 2, 3, 4]);
+// const result2 = closure([1, 2, 3, 4]);
+
+console.log(result([5, 6, 7, 8]));
+console.log(result([5, 6, 7, 8]));
+console.log(result([5, 6, 7, 8]));
