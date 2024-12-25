@@ -50,18 +50,18 @@
 //   function increment(f1) {
 //     counter++;
 //     console.log(Math.trunc(f1));
-//     // if (counter > 1) {
-//     //   return undefined;
-//     // } else {
+// if (counter > 1) {
+//   return undefined;
+// } else {
 //     console.log(counter);
-//     // }
+// }
 //   }
 //   return increment;
 // }
-// // const func = outer();
-// // func();
-// // func();
-// // func();
+// const func = outer();
+// func();
+// func();
+// func();
 // const anotherfunc = outer();
 // const result = anotherfunc(888.23232);
 // f1();
@@ -81,21 +81,20 @@
 // }
 // function display(data) {
 //   console.log(data);
-//   // console.log(err);
+// console.log(err);
 // }
-// // function hello() {
-// //   console.log("hello");
-// // }
+// function hello() {
+//   console.log("hello");
+// }
 // function block() {
 //   let output = [];
 //   for (let i = 0; i <= 90; i++) {
 //     output.push("human");
 //   }
-//   // console.log(output);
+// console.log(output);
 // }
 // setTimeout(() => console.log("hello"), 0);
 // const result = fetch("https://dog.ceo/api/breeds/image/random").then(display);
-
 // block();
 // console.log("first");
 // function outer(x) {
@@ -106,8 +105,8 @@
 // }
 // const main = outer(10);
 // console.log(main);
-// // const main = outer(10);
-// // console.log(main(20));
+// const main = outer(10);
+// console.log(main(20));
 
 // const closure = function (arr) {
 //   let counter = 0;
@@ -128,7 +127,7 @@
 //   return inner;
 // };
 // const result = closure([1, 2, 3, 4]);
-// // const result2 = closure([1, 2, 3, 4]);
+// const result2 = closure([1, 2, 3, 4]);
 
 // console.log(result([5, 6, 7, 8]));
 // console.log(result([5, 6, 7, 8]));
@@ -153,3 +152,14 @@
 //   const run = result({});
 //   console.log(run);
 // }
+let array = ["a", "b", "c", "d", "e"];
+// const name = true;
+// if (name === true) {
+//   console.log(array.splice(-1));
+// } else {
+//   console.log(array.slice(1, -2));
+// }
+//.reverse() and .splice mutate the original array
+array.splice(-1);
+console.log(array);
+console.log("array");
