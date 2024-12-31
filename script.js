@@ -225,15 +225,23 @@
 // }
 // // exports.squareOfZeroes = squareOfZeroes;
 // squareOfZeroes([1, 2, 3]);
-let post = "";
-let jsinput = document.querySelector(".a");
-let jsdiv = document.querySelector(".b");
-async function handleinput() {
-  post = await jsinput.value;
+let post = undefined;
+const jsinput = document.querySelector(".a");
+const jsdiv = document.querySelector(".b");
+function datatoview() {
+  jsinput.value = post == undefined ? "what's up nigga" : post;
   jsdiv.textContent = post;
 }
-async function clickhandle() {
-  jsinput.value = "";
+function handleinput() {
+  post = jsinput.value;
+  // datatoview();
+}
+function clickhandle() {
+  post = "";
+  // datatoview();
 }
 jsinput.oninput = handleinput;
 jsinput.onclick = clickhandle;
+setInterval(datatoview, 15);
+const arr = [2, 3, 1, 4];
+console.log(arr.toString());
