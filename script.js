@@ -225,23 +225,48 @@
 // }
 // // exports.squareOfZeroes = squareOfZeroes;
 // squareOfZeroes([1, 2, 3]);
-let post = undefined;
-const jsinput = document.querySelector(".a");
-const jsdiv = document.querySelector(".b");
-function datatoview() {
-  jsinput.value = post == undefined ? "what's up nigga" : post;
-  jsdiv.textContent = post;
-}
-function handleinput() {
-  post = jsinput.value;
-  // datatoview();
-}
-function clickhandle() {
-  post = "";
-  // datatoview();
-}
-jsinput.oninput = handleinput;
-jsinput.onclick = clickhandle;
-setInterval(datatoview, 15);
-const arr = [2, 3, 1, 4];
-console.log(arr.toString());
+// let post = undefined;
+// function datatoview() {
+//   jsinput.value = post == undefined ? "what's up nigga" : post;
+//   jsdiv.textContent = post;
+// }
+// function handleinput() {
+//   post = jsinput.value;
+//   // datatoview();
+// }
+// function clickhandle() {
+//   post = "";
+//   // datatoview();
+// }
+// jsinput.oninput = handleinput;
+// jsinput.onclick = clickhandle;
+// setInterval(datatoview, 15);
+// const arr = [2, 3, 1, 4];
+// console.log(arr.toString());
+// function num() {
+//   let counter = 0;
+//   function num3() {
+//     counter++;
+//     console.log(counter);
+//   }
+//   return num3;
+// }
+// const result = num;
+// // setInterval(result(), 15);
+// result();
+// result();
+// let post = "";
+// let jsdiv;
+// let jsinput;
+// function loaddata() {
+//   jsinput = document.createElement("input");
+//   jsdiv = document.createElement("div");
+//   jsinput.value = post;
+//   jsdiv.textContent = post;
+//   jsinput.oninput = handleinput;
+//   document.body.replaceChildren(jsinput, jsdiv);
+// }
+// function handleinput() {
+//   post = jsinput.value;
+// }
+// setInterval(loaddata, 15);
