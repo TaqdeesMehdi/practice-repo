@@ -255,18 +255,18 @@
 // // setInterval(result(), 15);
 // result();
 // result();
-// let post = "";
-// let jsdiv;
-// let jsinput;
-// function loaddata() {
-//   jsinput = document.createElement("input");
-//   jsdiv = document.createElement("div");
-//   jsinput.value = post;
-//   jsdiv.textContent = post;
-//   jsinput.oninput = handleinput;
-//   document.body.replaceChildren(jsinput, jsdiv);
-// }
-// function handleinput() {
-//   post = jsinput.value;
-// }
-// setInterval(loaddata, 15);
+let post = "";
+let jsdiv;
+let jsinput;
+function loaddata() {
+  jsinput = document.createElement("input");
+  jsdiv = document.createElement("div");
+  jsinput.value = post;
+  jsdiv.textContent = post;
+  jsinput.oninput = handleinput;
+  document.body.replaceChildren(jsinput, jsdiv);
+}
+function handleinput() {
+  post = jsinput.value;
+}
+loaddata();
