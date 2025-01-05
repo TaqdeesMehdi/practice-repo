@@ -270,3 +270,19 @@ function handleinput() {
   post = jsinput.value;
 }
 loaddata();
+// const arr = [1, 2, 3];
+// const newarr = arr.map((arr) => arr * 2);
+// console.log(newarr);
+// console.log(Array.prototype);
+const filter = (array, callback) => {
+  const output = [];
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i]) == true) {
+      output.push(array[i]);
+    }
+  }
+  return output;
+};
+console.log(filter([1, 2, 3, 4], (num) => num < 2));
+const fnarray = [(x) => x * 2, (x) => x - 3];
+console.log(fnarray.reduce((input, fn) => fn(input), 20));
