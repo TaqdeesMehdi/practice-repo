@@ -255,34 +255,72 @@
 // // setInterval(result(), 15);
 // result();
 // result();
-let post = "";
-let jsdiv;
-let jsinput;
-function loaddata() {
-  jsinput = document.createElement("input");
-  jsdiv = document.createElement("div");
-  jsinput.value = post;
-  jsdiv.textContent = post;
-  jsinput.oninput = handleinput;
-  document.body.replaceChildren(jsinput, jsdiv);
-}
-function handleinput() {
-  post = jsinput.value;
-}
-loaddata();
-// const arr = [1, 2, 3];
-// const newarr = arr.map((arr) => arr * 2);
-// console.log(newarr);
-// console.log(Array.prototype);
-const filter = (array, callback) => {
-  const output = [];
-  for (let i = 0; i < array.length; i++) {
-    if (callback(array[i]) == true) {
-      output.push(array[i]);
+// let post = "";
+// let jsdiv;
+// let jsinput;
+// function loaddata() {
+//   jsinput = document.createElement("input");
+//   jsdiv = document.createElement("div");
+//   jsinput.value = post;
+//   jsdiv.textContent = post;
+//   jsinput.oninput = handleinput;
+//   document.body.replaceChildren(jsinput, jsdiv);
+// }
+// function handleinput() {
+//   post = jsinput.value;
+// }
+// loaddata();
+// // const arr = [1, 2, 3];
+// // const newarr = arr.map((arr) => arr * 2);
+// // console.log(newarr);
+// // console.log(Array.prototype);
+// const filter = (array, callback) => {
+//   const output = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if (callback(array[i]) == true) {
+//       output.push(array[i]);
+//     }
+//   }
+//   return output;
+// };
+// console.log(filter([1, 2, 3, 4], (num) => num < 2));
+// const fnarray = [(x) => x * 2, (x) => x - 3];
+// console.log(fnarray.reduce((input, fn) => fn(input), 20));
+// const outer = () => {
+//   let counter1 = 0;
+//   // let counter2 = 0;
+//   const inner1 = () => {
+//     counter1++;
+//     return counter1;
+//     // const inner2 = () => {
+//     //   counter2++;
+//     // };
+//     // return inner2;
+//   };
+//   return inner1;
+// };
+// const result = outer();
+// console.log(result());
+// console.log(result());
+//-------------------------------------------------
+//ALGO 1 NON-CONTRUCTIBLE ARRAY
+//[1,1,2,3,5,7,22]
+function nonconstruct(array) {
+  let newarr = array.sort((a, b) => a - b);
+  let change = 0;
+  for (let i = 0; i < newarr.length; i++) {
+    if (newarr[i] > change + 1) {
+      return change + 1;
     }
+    change = change + newarr[i];
   }
-  return output;
-};
-console.log(filter([1, 2, 3, 4], (num) => num < 2));
-const fnarray = [(x) => x * 2, (x) => x - 3];
-console.log(fnarray.reduce((input, fn) => fn(input), 20));
+  return change + 1;
+}
+console.log(nonconstruct([5, 7, 1, 1, 2, 3, 22]));
+//--------------------------------------------------
+
+//ALGO NO 2 SQUARED SORTED ARRAY
+
+function squaredsorted(array) {
+  let newarr = new Array(array.length).fill(0);
+}
